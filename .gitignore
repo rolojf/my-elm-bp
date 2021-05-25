@@ -1,0 +1,35 @@
+node_modules/
+elm-stuff/
+dist/
+.cache/
+gen/
+.idea/
+
+# Ignore docs files
+.vscode
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+# *.lock
+
+# OS or Editor folders
+*.scssc
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+.asset-cache
+
+# Agregados por mi a este proyecto
+/public/elm.js

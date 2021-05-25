@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Elm Basic Starter BoilerPlate</title>
+      <script src="elm.js"></script>
+   </head>
+   <body>
+      <div id="myapp"></div>
+      <br />
+      <form id="miforma" style="margin-left: 3rem">
+         <label for="nombre">Dime el Nombre:</label><br />
+         <input type="text" id="nombre" name="nombre" />
+         <button type="submit">Enviar</button>
+      </form>
+      <br />
+      <script>
+         var app = Elm.Main.init({
+            node: document.getElementById("myapp"),
+         });
+         // mensaje que llega de Elm
+         app.ports.sendMessage.subscribe(function (message) {
+            console.log(message);
+         });
+         // Mensaje que va hacia la Elm App
+         const deLaForma = document.getElementById("miforma");
+         deLaForma.addEventListener("submit", function (event) {
+            console.log("Captamos el enter FINALMENTE");
+            event.preventDefault();
+            const deQueCampo = document.getElementById("nombre");
+            app.ports.messageReceiver.send(deQueCampo.value);
+            this.reset();
+         });
+      </script>
+   </body>
+</html>

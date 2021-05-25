@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "elm-go --path-to-elm=node_modules/.bin/elm --dir=public src/Main.elm -- --output=public/elm.js",
+    "server": "python -m http.server 8888 --bind localhost --directory public"
+  },
+  "devDependencies": {
+    "elm-go": "^5.0.12",
+    "elm-tooling": "^1.3.0"
+  }
+}
