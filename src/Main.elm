@@ -2,7 +2,7 @@ port module Main exposing (..)
 
 import Browser
 import Css.Global
-import Html.Styled as Html exposing (Html, div, text)
+import Html.Styled as Htmls exposing (Html, div, text)
 import Html.Styled.Attributes as Attr exposing (class, css)
 import Html.Styled.Events as Event
 import Json.Decode as D
@@ -18,7 +18,7 @@ main : Program () Model Msg
 main =
     Browser.element
         { init = init
-        , view = view >> Html.toUnstyled
+        , view = view >> Htmls.toUnstyled
         , update = update
         , subscriptions = subscriptions
         }
@@ -102,16 +102,16 @@ view model =
         [ Css.Global.global Tw.globalStyles
         , div
             [ css [ Tw.bg_green_200, Tw.p_8 ] ]
-            [ Html.h1
+            [ Htmls.h1
                 [ css [ Tw.text_3xl ] ]
                 [ text "Echo Chat" ]
-            , Html.ul [ css [ Tw.flex ] ]
+            , Htmls.ul [ css [ Tw.flex ] ]
                 (List.map
-                    (\msg -> Html.li [ css [ Tw.ml_3 ] ] [ text msg ])
+                    (\msg -> Htmls.li [ css [ Tw.ml_3 ] ] [ text msg ])
                     model.messages
                 )
-            , Html.br [] []
-            , Html.input
+            , Htmls.br [] []
+            , Htmls.input
                 [ Attr.type_ "text"
                 , css [ Tw.border, Tw.border_indigo_600 ]
                 , Attr.placeholder "Escribe pues"
@@ -120,7 +120,7 @@ view model =
                 , Attr.value model.draft
                 ]
                 []
-            , Html.button
+            , Htmls.button
                 [ Event.onClick Send
                 , css [ Tw.ml_3, Tw.border, Tw.border_black, Tw.bg_yellow_300, Tw.p_2, Tw.rounded]]
                 [ text "Send" ]
