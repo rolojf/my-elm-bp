@@ -1,0 +1,29 @@
+* ReadMe en Español
+
+** Qué
+Este repositorio es lo que uso para hacer una miniaplicación en elm.
+Ya está integrado elm y sus paquetes para decodificar json y poder usar tailwindcss.
+Ya está integrado npm con sus paquetes para compilar y recargar en caliente.
+
+** Cómo
+1. Clonar el repositorio
+2. Borrar el subdirectorio ~.git~
+3. Ejectutar ~$npm install~
+4. Trabajar el proyecto modificando ~src/Main.elm~ y ~public/index.html~
+
+
+
+* ReadMe en Inglés
+
+** What
+This repo is what I use to quick start a mini app in elm lang, without all the boilerplate.
+It is already wired up with elm and just the modules to decode Json and be able to use tailwindcss.
+NPM is already wired with scrits and packages to compile and hot reload.
+
+** How
+1. Clone the repo
+2. Delete the ~.git~ folder so you can make it your own git repo.
+3. Execute de command ~$npm install~
+4. Work on your project and modify ~src/Main.elm~ & ~public/index.html~ at will.
+
+* Cheers
